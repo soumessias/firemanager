@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FireManager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>FireManager</h1>
+
+    <div class="main-container">
+        <div class="controls-container">
+            <div class="container">
+                <h2>Duplicate Document</h2>
+                <form id="duplicate-form">
+                    <select id="duplicate-collection"></select>
+                    <select id="duplicate-id"></select>
+                    <input type="text" id="new-duplicate-id" placeholder="New Document ID (optional)">
+                    <button type="submit">Duplicate</button>
+                </form>
+            </div>
+
+            <div class="container">
+                <h2>Query Documents</h2>
+                <form id="query-form">
+                    <select id="query-collection"></select>
+                    <select id="query-field"></select>
+                    <select id="query-operator">
+                        <option value="==">== (Equals)</option>
+                        <option value="<">< (Less Than)</option>
+                        <option value="<="><= (Less Than or Equal To)</option>
+                        <option value=">">> (Greater Than)</option>
+                        <option value=">=">>= (Greater Than or Equal To)</option>
+                        <option value="!=">!= (Not Equals)</option>
+                        <option value="array-contains">array-contains</option>
+                        <option value="array-contains-any">array-contains-any</option>
+                        <option value="in">in</option>
+                        <option value="not-in">not-in</option>
+                    </select>
+                    <input type="text" id="query-value" placeholder="Value">
+                    <button type="submit">Query</button>
+                </form>
+            </div>
+
+            <div class="container">
+                <h2>Get All Documents in Collection</h2>
+                <form id="get-collection-form">
+                    <select id="get-collection-name"></select>
+                    <button type="submit">Get Collection</button>
+                </form>
+            </div>
+
+            <div class="container">
+                <h2>Bulk Delete Documents</h2>
+                <form id="delete-form">
+                    <select id="delete-collection"></select>
+                    <select id="delete-field"></select>
+                    <select id="delete-operator">
+                        <option value="==">== (Equals)</option>
+                        <option value="<">< (Less Than)</option>
+                        <option value="<="><= (Less Than or Equal To)</option>
+                        <option value=">">> (Greater Than)</option>
+                        <option value=">=">>= (Greater Than or Equal To)</option>
+                        <option value="!=">!= (Not Equals)</option>
+                        <option value="array-contains">array-contains</option>
+                        <option value="array-contains-any">array-contains-any</option>
+                        <option value="in">in</option>
+                        <option value="not-in">not-in</option>
+                    </select>
+                    <input type="text" id="delete-value" placeholder="Value">
+                    <button type="submit">Delete</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="results-container">
+            <h2>Results</h2>
+            <div id="results"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
