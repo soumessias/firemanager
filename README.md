@@ -15,7 +15,7 @@ FireManager is a web application that provides a user-friendly interface to inte
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your-username/firemanager.git
+    git clone https://github.com/soumessias/firemanager.git
     cd firemanager
     ```
 
